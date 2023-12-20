@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(images/white-wall.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#container {
+  position: relative;
+}
+
+#reloj {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-color: rgb(95, 92, 92);
+  border: 15px solid rgb(17, 17, 17);
+  box-shadow: 6px 6px 2rem rgba(77, 73, 71, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+#reloj span {
+  position: absolute;
+  transform: rotate(calc(30deg * var(--i)));
+  inset: 12px;
+  text-align: center;
+}
+
+#reloj span b {
+  padding: 9px;
+  display: inline-block;
+  font-size: 20px;
+  transform: rotate(calc(-30deg * var(--i)));
+}
+
+#reloj::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 0.4px solid black;
+  background-color: #fff;
+  z-index: 5;
+}
+
+#minutero,
+#segundero,
+#horario {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+i {
+  position: absolute;
+  border-radius: 10px;
+}
+
+#horario i {
+  height: 60px;
+  width: 5.2px;
+  background-color: #000000;
+}
+
+#minutero i {
+  height: 110px;
+  width: 3px;
+  background-color: #000000;
+}
+
+#segundero i {
+  height: 110px;
+  width: 1.5px;
+  background-color: #ff0000;
+}
